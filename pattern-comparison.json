@@ -1,10 +1,9 @@
 {
   "files": [
+    "data/normalized.1kinetic-1strobe-1white2blank3red.csv",
     "data/normalized.1kinetic-2ribbon-1white2blank3red.csv",
     "data/normalized.1kinetic-3ultra_dops-1white2blank3red.csv",
     "data/normalized.1kinetic-4dops-1white2blank3red.csv",
-    "data/normalized.1kinetic-1strobe-1white2blank3red.csv",
-    "data/normalized.1kinetic-5strobie-1white2blank3red.csv",
     "data/normalized.1kinetic-5strobie-1white2blank3red.csv",
     "data/normalized.1kinetic-6blink-1white2blank3red.csv",
     "data/normalized.1kinetic-7hyper_strobe-1white2blank3red.csv",
@@ -12,74 +11,67 @@
     "data/normalized.1kinetic-9stretch-1white2blank3red.csv"
   ],
   "datasets": {
+    "data/normalized.1kinetic-1strobe-1white2blank3red.csv::1": {
+      "start": 575,
+      "end": 9195,
+      "x_offset": -113695.38753094981,
+      "y_offset": -183.59682734537643,
+      "roll": 3
+    },
     "data/normalized.1kinetic-2ribbon-1white2blank3red.csv::1": {
       "start": 431,
       "end": 9368,
-      "x_offset": -55771.53467628913,
-      "y_offset": 140.6866232463239,
+      "x_offset": -21958.424567959006,
+      "y_offset": -299.4704709484664,
       "roll": 3
     },
     "data/normalized.1kinetic-3ultra_dops-1white2blank3red.csv::1": {
       "start": 1897,
       "end": 7874,
-      "x_offset": -630598.9173616887,
-      "y_offset": 194.0486105324756,
+      "x_offset": -630057.2119888845,
+      "y_offset": -220.99608264489433,
       "roll": 3
     },
     "data/normalized.1kinetic-4dops-1white2blank3red.csv::1": {
       "start": 833,
-      "end": 8879,
-      "x_offset": -192385.59488587,
-      "y_offset": -80.45392273470968,
-      "roll": 3
-    },
-    "data/normalized.1kinetic-1strobe-1white2blank3red.csv::1": {
-      "start": 575,
-      "end": 9167,
-      "x_offset": -114359.91611856941,
-      "y_offset": -180.67087841270194,
+      "end": 8908,
+      "x_offset": -191531.24652060113,
+      "y_offset": -431.3907464110021,
       "roll": 3
     },
     "data/normalized.1kinetic-5strobie-1white2blank3red.csv::1": {
-      "start": 1092,
-      "end": 8534,
-      "x_offset": -252281.0822971172,
-      "y_offset": -373.42791344893783,
-      "roll": 3
-    },
-    "data/normalized.1kinetic-5strobie-1white2blank3red.csv::2": {
-      "start": 575,
-      "end": 9052,
-      "x_offset": -88959.12848186056,
-      "y_offset": -266.80156701454814,
+      "start": 230,
+      "end": 9569,
+      "x_offset": 22242.795181797246,
+      "y_offset": -583.9293628107018,
       "roll": 3
     },
     "data/normalized.1kinetic-6blink-1white2blank3red.csv::1": {
-      "start": 431,
-      "end": 9282,
-      "x_offset": -102053.71773513033,
-      "y_offset": -399.1518758942541,
+      "start": 402,
+      "end": 9368,
+      "x_offset": 8253.950053097164,
+      "y_offset": -495.3174321968904,
       "roll": 3
     },
     "data/normalized.1kinetic-7hyper_strobe-1white2blank3red.csv::1": {
-      "start": 575,
+      "start": 489,
       "end": 9253,
-      "x_offset": -115264.82382652897,
-      "y_offset": -495.62080362806233,
+      "x_offset": -12059.845163740023,
+      "y_offset": -595.8907257521143,
       "roll": 3
     },
     "data/normalized.1kinetic-8burst-1white2blank3red.csv::1": {
       "start": 805,
       "end": 8966,
-      "x_offset": -168711.92187169267,
-      "y_offset": -701.0438244979124,
+      "x_offset": -167229.2936113461,
+      "y_offset": -765.2196335171427,
       "roll": 3
     },
     "data/normalized.1kinetic-9stretch-1white2blank3red.csv::1": {
-      "start": 0,
-      "end": 9483,
-      "x_offset": 73965.52651840475,
-      "y_offset": -698.8608805240376,
+      "start": 57,
+      "end": 9713,
+      "x_offset": 74882.0050914415,
+      "y_offset": -872.2754591542629,
       "roll": 3
     }
   }

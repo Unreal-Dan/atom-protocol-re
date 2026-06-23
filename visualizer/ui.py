@@ -253,7 +253,7 @@ class DatasetUI:
         self.layout.addWidget(self.x_drag)
         self.layout.addWidget(self.y_drag)
 
-        self.layout.addWidget(self._mk_slider("Roll", 1, 400, d.roll))
+        self.layout.addWidget(self._mk_slider("Roll", 1, 100, d.roll))
 
     def remove(self):
         self.toolbox.removeItem(self.idx)
@@ -370,23 +370,34 @@ class MainWindow(QtWidgets.QWidget):
             (d for d in self.datasets if self.ui_map[d.id].page is widget),
             None
         )
+
         if ds is None:
             return
 
+        # IMPORTANT: remove curve from plot
+        if getattr(ds, "curve", None) is not None:
+            self.plot.removeItem(ds.curve)
+            ds.curve = None
+
+        # remove UI
         ui = self.ui_map.pop(ds.id, None)
         if ui:
             ui.remove()
 
+        # remove dataset
         self.datasets = [d for d in self.datasets if d.id != ds.id]
+
         self.redraw()
 
     def redraw(self):
+        active_ids = {id(d) for d in self.datasets}
+
         for i, ds in enumerate(self.datasets):
 
             if ds.color is None:
                 ds.color = self.colors[i % len(self.colors)]
 
-            if not hasattr(ds, "curve") or ds.curve is None:
+            if getattr(ds, "curve", None) is None:
                 ds.curve = self.plot.plot(pen=pg.mkPen(ds.color, width=2))
 
             df = recompute(ds)
@@ -397,6 +408,12 @@ class MainWindow(QtWidgets.QWidget):
                 df["t"].to_numpy() + ds.x_offset,
                 df["v"].to_numpy() + ds.y_offset
             )
+
+        # IMPORTANT CLEANUP: remove orphan curves
+        for item in list(self.plot.items):
+            if hasattr(item, "opts"):  # PlotDataItem
+                if item not in [d.curve for d in self.datasets if d.curve]:
+                    self.plot.removeItem(item)
 
     def load_project(self, project):
         for ds in self.datasets:
