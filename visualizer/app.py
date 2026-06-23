@@ -1,5 +1,6 @@
 import sys
 import json
+import os
 from PyQt6 import QtWidgets
 
 from visualizer.data_io import load_csv, save_project, load_project
@@ -15,6 +16,10 @@ class DatasetFactory:
         return f"{filename}::{self.file_counter[filename]}"
 
     def create(self, filename):
+        # normalize stored filename immediately
+        filename = os.path.normpath(filename)
+        filename = os.path.relpath(filename)
+
         return load_csv(filename, self.make_id(filename))
 
 
